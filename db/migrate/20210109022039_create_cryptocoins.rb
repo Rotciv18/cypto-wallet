@@ -1,6 +1,6 @@
-class CreateCyptocoins < ActiveRecord::Migration[6.1]
+class CreateCryptocoins < ActiveRecord::Migration[6.1]
   def change
-    create_table :cyptocoins do |t|
+    create_table :cryptocoins do |t|
       t.string :description
       t.string :acronym
       t.string :image_url

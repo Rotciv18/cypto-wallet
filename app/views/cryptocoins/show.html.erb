@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cryptocoin.description %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @cryptocoin.acronym %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @cryptocoin.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_cryptocoin_path(@cryptocoin) %> |
+<%= link_to 'Back', cryptocoins_path %>

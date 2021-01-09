@@ -1,6 +1,6 @@
 require "test_helper"
 
-class CyptocoinTest < ActiveSupport::TestCase
+class CryptocoinTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
