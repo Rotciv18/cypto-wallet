@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @cyptocoin.description %>
+</p>
+
+<p>
+  <strong>Acronym:</strong>
+  <%= @cyptocoin.acronym %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @cyptocoin.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_cyptocoin_path(@cyptocoin) %> |
+<%= link_to 'Back', cyptocoins_path %>

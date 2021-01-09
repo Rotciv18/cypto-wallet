@@ -1,0 +1,32 @@
+<%= form_with(model: cyptocoin) do |form| %>
+  <% if cyptocoin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cyptocoin.errors.count, "error") %> prohibited this cyptocoin from being saved:</h2>
+
+      <ul>
+        <% cyptocoin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :acronym %>
+    <%= form.text_field :acronym %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Cyptocoin < ApplicationRecord
+end

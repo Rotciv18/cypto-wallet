@@ -1,0 +1,2 @@
+module CyptocoinsHelper
+end
