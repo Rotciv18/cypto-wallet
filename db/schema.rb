@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_09_022039) do
+ActiveRecord::Schema.define(version: 2021_01_10_093617) do
 
   create_table "cryptocoins", force: :cascade do |t|
     t.string "description"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 2021_01_09_022039) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "mining_type_id"
+    t.index ["mining_type_id"], name: "index_cryptocoins_on_mining_type_id"
   end
 
+  create_table "mining_types", force: :cascade do |t|
+    t.string "description"
+    t.string "acronym"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "cryptocoins", "mining_types"
 end
