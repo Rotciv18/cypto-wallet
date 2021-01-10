@@ -1,6 +1,8 @@
 class CryptocoinsController < ApplicationController
   before_action :set_cryptocoin, only: [:show, :edit, :update, :destroy]
 
+  layout "admin"
+
   # GET /cryptocoins
   # GET /cryptocoins.json
   def index
