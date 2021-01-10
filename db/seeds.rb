@@ -6,23 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-coins = [
-  {
-    description: "Bitcoin",
-    acronym: "BTC",
-    image_url: "https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/02/bitcoin-logo.png"
-  },
-  {
-    description: "Ethereum",
-    acronym: "ETC",
-    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj4sPvxHepSWg-lkodct5SMVvhJoKVPN3b0Q&usqp=CAU"
-  },
-  {
-    description: "Dash",
-    acronym: "DASH",
-    image_url: "https://media.dash.org/wp-content/uploads/dash-d.png"
-  }
-]
 
 mining_types = [
   {
@@ -38,10 +21,30 @@ mining_types = [
     acronym: "PoC"
   }
 ]
-
-coins.each do |coin|
-  Cryptocoin.find_or_create_by!(coin)
-end
 mining_types.each do |mining_type|
   MiningType.find_or_create_by!(mining_type)
+end
+
+coins = [
+  {
+    description: "Bitcoin",
+    acronym: "BTC",
+    image_url: "https://www.comocomprarcriptomoedas.com/wp-content/uploads/2018/02/bitcoin-logo.png",
+    mining_type: MiningType.find_by(acronym: "PoW")
+  },
+  {
+    description: "Ethereum",
+    acronym: "ETC",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj4sPvxHepSWg-lkodct5SMVvhJoKVPN3b0Q&usqp=CAU",
+    mining_type: MiningType.all.sample
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    image_url: "https://media.dash.org/wp-content/uploads/dash-d.png",
+    mining_type: MiningType.all.sample
+  }
+]
+coins.each do |coin|
+  Cryptocoin.find_or_create_by!(coin)
 end

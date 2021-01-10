@@ -15,5 +15,10 @@
   <%= @cryptocoin.image_url %>
 </p>
 
+<p>
+  <strong>Mining Type:</strong>
+  <%= @cryptocoin.mining_type.description %>
+</p>
+
 <%= link_to 'Edit', edit_cryptocoin_path(@cryptocoin) %> |
 <%= link_to 'Back', cryptocoins_path %>

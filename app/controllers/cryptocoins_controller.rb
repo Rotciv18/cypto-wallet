@@ -1,5 +1,6 @@
 class CryptocoinsController < ApplicationController
   before_action :set_cryptocoin, only: [:show, :edit, :update, :destroy]
+  before_action :set_mining_type_options, only: [:new, :edit]
 
   layout "admin"
 
@@ -71,6 +72,10 @@ class CryptocoinsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cryptocoin_params
-      params.require(:cryptocoin).permit(:description, :acronym, :image_url)
+      params.require(:cryptocoin).permit(:description, :acronym, :image_url, :mining_type_id)
+    end
+
+    def set_mining_type_options
+      @mining_type_options = MiningType.all.pluck(:description, :id)
     end
 end
