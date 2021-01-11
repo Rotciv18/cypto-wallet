@@ -2,8 +2,6 @@ class CryptocoinsController < ApplicationController
   before_action :set_cryptocoin, only: [:show, :edit, :update, :destroy]
   before_action :set_mining_type_options, only: [:new, :edit]
 
-  layout "admin"
-
   # GET /cryptocoins
   # GET /cryptocoins.json
   def index

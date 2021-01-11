@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  actual_locale: "Português do Brasil"
   hello: "Olá mundo"
   welcome: "Seja Bem-Vindo"
 
