@@ -1,0 +1,23 @@
+'pt-BR':
+  activerecord:
+    models:
+      cryptocoin: 
+        one: Cryptomoeda
+        other: Cryptomoedas
+      mining_type: 
+        one: Tipo de Mineração
+        other: Tipos de Mineração
+    attributes:
+      cryptocoin:
+        description: Descrição
+        acronym: Sigla
+        image_url: URL da imagem
+        mining_type: Tipo de Mineração
+        updated_at: Atualizado em
+        created_at: Criado em
+      mining_type:
+        description: Descrição
+        acronym: Sigla
+        updated_at: Atualizado em
+        created_at: Criado em
+      # will translate User attribute "login" as "Handle"

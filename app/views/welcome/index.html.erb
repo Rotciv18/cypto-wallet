@@ -1,4 +1,7 @@
-<h1><%= @name ? "Bem Vindo de volta, #{@name}!" : "Seja Bem-Vindo!" %></h1>
-<p><strong>Data: </strong> <%= br_date(Date.today) %> </p>
+<h1><%= @name ? "Bem Vindo de volta, #{@name}!" : "#{t(:welcome)}!" %></h1>
+<p>
+  <%# <strong>Data: </strong> <%= br_date(Date.today) %>
+  <strong>Data: </strong> <%= l(Date.today) %>
+</p>
 
 <%= render "menu" %>

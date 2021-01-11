@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th>Acronym</th>
+      <th><%= @cryptocoins.human_attribute_name(:image_url) %></th>
+      <th><%= @cryptocoins.human_attribute_name(:description) %></th>
+      <th><%= @cryptocoins.human_attribute_name(:acronym) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= image_tag cryptocoin.image_url, width: 25, height: 25 %></td>
         <td><%= cryptocoin.description %></td>
         <td><%= cryptocoin.acronym %></td>
-        <td><%= link_to 'Show', cryptocoin %></td>
-        <td><%= link_to 'Edit', edit_cryptocoin_path(cryptocoin) %></td>
-        <td><%= link_to 'Destroy', cryptocoin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.show'), cryptocoin %></td>
+        <td><%= link_to t('links.edit'), edit_cryptocoin_path(cryptocoin) %></td>
+        <td><%= link_to t('links.destroy'), cryptocoin, method: :delete, data: { confirm: t('alerts.are_you_sure') } %></td>
       </tr>
     <% end %>
   </tbody>
