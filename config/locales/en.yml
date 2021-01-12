@@ -33,6 +33,9 @@ en:
   actual_locale: "English"
   hello: "Hello world"
   welcome: "Welcome"
+  about: "This is the Crypto-Wallet, a shitty app"
+  cryptocoins: "Cryptocoins"
+  mining_types: "Mining Types"
 
   links:
     edit: "Edit"

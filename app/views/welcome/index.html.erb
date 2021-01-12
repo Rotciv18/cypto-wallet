@@ -5,7 +5,6 @@
   <p>Idioma atual: <strong><%= t(:actual_locale) %></strong> </p>
   <p><strong>Data: </strong> <%= l(Date.today) %></p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button"> <%= "#{t(:cryptocoins)}" %> </a>
-    <a class="btn btn-primary btn-lg" href="#" role="button"> <%= "#{t(:mining_types)}" %> </a>
+    <%= render "menu" %>
   </p>
 </div>
