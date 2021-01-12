@@ -41,6 +41,7 @@ en:
     edit: "Edit"
     show: "Show"
     destroy: "Destroy"
+    new: "New"
 
   alerts:
     are_you_sure: "Are you sure?"

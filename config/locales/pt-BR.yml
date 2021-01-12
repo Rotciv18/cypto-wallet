@@ -41,6 +41,7 @@ pt-BR:
     edit: "Editar"
     show: "Mostrar"
     destroy: "Apagar"
+    new: "Novo"
 
   alerts:
     are_you_sure: "Tem certeza?"

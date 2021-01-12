@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cryptocoins</h1>
+<h1> <%= Cryptocoin.model_name.human(count: @cryptocoins.count) %> </h1>
 
 <table class="table table-hover">
   <thead>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Cryptocoin', new_cryptocoin_path %>
+<%= link_to t('links.new'), new_cryptocoin_path, class: 'btn btn-primary' %>
