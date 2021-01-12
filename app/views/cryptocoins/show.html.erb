@@ -1,24 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @cryptocoin.description %>
-</p>
 
-<p>
-  <strong>Acronym:</strong>
-  <%= @cryptocoin.acronym %>
-</p>
+<form >
 
-<p>
-  <strong>Image url:</strong>
-  <%= @cryptocoin.image_url %>
-</p>
+  <div class="form-group">
+    <%= label_tag @cryptocoin.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @cryptocoin.description, class: 'form-control', disabled: true %>
+  </div>
 
-<p>
-  <strong>Mining Type:</strong>
-  <%= @cryptocoin.mining_type.description %>
-</p>
+  <div class="form-group">
+    <%= label_tag @cryptocoin.class.human_attribute_name(:acronym) %>
+    <%= text_field_tag nil, @cryptocoin.acronym, class: 'form-control', disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag @cryptocoin.class.human_attribute_name(:image_url) %>
+    <%= text_field_tag nil, @cryptocoin.image_url, class: 'form-control', disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag @cryptocoin.class.human_attribute_name(:mining_type) %>
+    <%= text_field_tag nil, @cryptocoin.mining_type.description, class: 'form-control', disabled: true %>
+  </div>
+</form>
 
 <%= link_to 'Edit', edit_cryptocoin_path(@cryptocoin) %> |
 <%= link_to 'Back', cryptocoins_path %>
