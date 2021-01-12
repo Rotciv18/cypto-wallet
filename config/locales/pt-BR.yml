@@ -33,6 +33,9 @@ pt-BR:
   actual_locale: "Português do Brasil"
   hello: "Olá mundo"
   welcome: "Seja Bem-Vindo"
+  about: "Este é o Crypto Wallet, um app pra tu cadastrar moeda de merda."
+  cryptocoins: "Cryptomoedas"
+  mining_types: "Tipos de Mineração"
 
   links:
     edit: "Editar"

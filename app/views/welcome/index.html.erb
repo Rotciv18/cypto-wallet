@@ -1,8 +1,11 @@
-<h1><%= @name ? "Bem Vindo de volta, #{@name}!" : "#{t(:welcome)}!" %></h1>
-<p>Idioma atual: <strong><%= t(:actual_locale) %></strong> </p>
-<p>
-  <%# <strong>Data: </strong> <%= br_date(Date.today) %>
-  <strong>Data: </strong> <%= l(Date.today) %>
-</p>
-
-<%= render "menu" %>
+<div class="jumbotron">
+  <h1 class="display-4"> <%= "#{t(:welcome)}!" %> </h1>
+  <p class="lead"> <%= "#{t(:about)}" %> </p>
+  <hr class="my-4">
+  <p>Idioma atual: <strong><%= t(:actual_locale) %></strong> </p>
+  <p><strong>Data: </strong> <%= l(Date.today) %></p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button"> <%= "#{t(:cryptocoins)}" %> </a>
+    <a class="btn btn-primary btn-lg" href="#" role="button"> <%= "#{t(:mining_types)}" %> </a>
+  </p>
+</div>

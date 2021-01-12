@@ -12,9 +12,11 @@
   </head>
 
   <body>
-    <h1>CABEÇALHO - <%= params[:controller] %></h1>
-    <p> <%= link_to 'Português', root_path(locale: 'pt-BR') %> </p>
-    <p> <%= link_to 'English', root_path(locale: 'en') %> </p>
-    <%= yield %>
+    <div class="container-fluid">
+      <h1>CABEÇALHO - <%= params[:controller] %></h1>
+      <p> <%= link_to 'Português', root_path(locale: 'pt-BR') %> </p>
+      <p> <%= link_to 'English', root_path(locale: 'en') %> </p>
+      <%= yield %>
+    </div>
   </body>
 </html>
