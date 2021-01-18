@@ -24,11 +24,11 @@ namespace :dev do
     end
   end
 
-private
-  def show_spinner(starting_msg, ending_msg = "Done.")
-    spinner = TTY::Spinner.new("[:spinner] #{starting_msg }")
-    spinner.auto_spin
-    yield
-    spinner.success("(#{ending_msg})")
-  end
+  private
+    def show_spinner(starting_msg, ending_msg = "Done.")
+      spinner = TTY::Spinner.new("[:spinner] #{starting_msg }")
+      spinner.auto_spin
+      yield
+      spinner.success("(#{ending_msg})")
+    end
 end
